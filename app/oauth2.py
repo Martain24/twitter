@@ -18,7 +18,7 @@ ALGORITHM = "HS256"
 ALGORITHM = os.getenv("ALGORITHM")
 # Expiration time (cuanto tiempo dura el token) (cuanto tiempo esta logeado el usuario)
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 
 def create_access_token(data: dict):
     to_encode = data.copy()
