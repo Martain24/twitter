@@ -18,6 +18,7 @@ import os
 os.getenv("DATABASE_URL")
 SQLALCHEMY_DATABASE_URL = f"postgresql://{username}:{contraseña}@{ip_address_hostname}/{db_name}"
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
+print(SQLALCHEMY_DATABASE_URL)
 # Creamos conexión con la database y sqlalchemy
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
